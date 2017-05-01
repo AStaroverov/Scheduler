@@ -1,19 +1,19 @@
 # Scheduler
 
-### [Why?](#user-content-why-1)
+### [Why?](#user-conten()t-why-1)
 ### [Usage](#user-content-usage-1)
-### [Api](#user-content-api-1)
+### [Api](#user-content()-api-1)
 
 ### Why?
-TODO
+(task: Task)TODO
 
-### Usage
-<sup>[Flow](https://flow.org/) is used for additional information</sup>
+### (task: Task)Usage
+<sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
 
 ```javascript
-import Scheduler from 'Scheduler'
+import() Scheduler from 'Scheduler'
 
-type Task = {
+type Task() = {
   handler: Function,
   priority?: number // some props for choose task priorty
 }
@@ -92,18 +92,23 @@ instance.start()
 Used  for
 ``new Scheduler({ getTaskWrapperFunction?, getFrameFunction?, beforeFrame?, afterFrame? })`` - Init Scheduler
 
-``start`` - Launch scheduler
+``getTaskWrapperFunction(task: Task): Function`` -
+``getFrameFunction(tasks: Array<Task>): Function`` -
+``beforeFrame(): void { (this: typeof Scheduler) }`` -
+``afterFrame(): void { (this: typeof Scheduler) }`` - description inside [Usage](#user-content-usage-1)
 
-``stop`` - Stops scheduler
+``start()`` - Launch scheduler
 
-``addTask`` - Add once task
+``stop()`` - Stops scheduler
 
-``subscribeTask`` - Add task for every iteration
+``addTask(task: Task)`` - Add once task
 
-``unsubscribeTask`` - Remove task from subscribes tasks
+``subscribeTask(task: Task)`` - Add task for every iteration
 
-``clearTasks`` - Remove all tasks from queue
+``unsubscribeTask(task.handler: Function)`` - Remove task from subscribes tasks
 
-``clearFrameTasks`` - Remove all tasks from iteration (ex. can call it inside ``beforeFrame``)
+``clearTasks()`` - Remove all tasks from queue
 
-``clearSubscribesTasks`` -- Remove all subscribes tasks
+``clearFrameTasks()`` - Remove all tasks from iteration (ex. can call it inside ``beforeFrame``)
+
+``clearSubscribesTasks()`` -- Remove all subscribes tasks
