@@ -11,7 +11,7 @@ export default class Scheduler {
     this.subscribesTasks = []
     this.frameTasks = []
 
-    this._getTaskWrapperFunction = getTaskWrapperFunction
+    this._getTaskWrapperFunction = getTaskWrapperFunction || (() => void 0)
     this._getFrameFunction = getFrameFunction || (() => raf)
     this._beforeFrame = beforeFrame
     this._afterFrame = afterFrame

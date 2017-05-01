@@ -99,7 +99,9 @@ var Scheduler = function () {
     this.subscribesTasks = [];
     this.frameTasks = [];
 
-    this._getTaskWrapperFunction = getTaskWrapperFunction;
+    this._getTaskWrapperFunction = getTaskWrapperFunction || function () {
+      return void 0;
+    };
     this._getFrameFunction = getFrameFunction || function () {
       return raf;
     };
