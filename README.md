@@ -8,9 +8,9 @@
 
 ### Why?
 
-Sometimes for better performance for us applications (SPA) we should manage queue and priority functions.
+Sometimes for smooth work (60fps) for us applications (SPA) we should manage queue and priority functions.
 
-For this goals was created this Scheduler.
+For this goal was created this Scheduler.
 
 ### Usage
 <sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
