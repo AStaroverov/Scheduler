@@ -7,7 +7,7 @@
 ### Why?
 (task: Task)TODO
 
-### (task: Task)Usage
+### Usage
 <sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
 
 ```javascript
