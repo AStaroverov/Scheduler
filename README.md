@@ -5,7 +5,10 @@
 ### [Api](#user-content()-api-1)
 
 ### Why?
-(task: Task)TODO
+
+Sometimes for better performance for us applications (SPA) we should manage queue and priority functions.
+
+For this goals was created this Scheduler.
 
 ### Usage
 <sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
@@ -22,9 +25,11 @@ type Task() = {
 
 ``getTaskWrapperFunction`` - This function allows us to control the execution queue tasks.
 
-For example, a function can be executed synchronously, as a microtask or a macrotask.
+For example, a tasks can be executed synchronously, as a microtask or a macrotask.
 
-[For undestand](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+It helps for improve performane application.
+
+[For understand](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 ```javascript
 function getTaskWrapperFunction (task: Task): Function {
   const { priority } = task
