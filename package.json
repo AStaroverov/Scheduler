@@ -1,5 +1,5 @@
 {
-  "name": "scheduler",
+  "name": "browser-scheduler",
   "version": "1.0.0",
   "description": "scheduler for absolutly control",
   "main": "scheduler.js",
