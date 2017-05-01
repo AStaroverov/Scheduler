@@ -19,8 +19,11 @@ type Task() = {
 }
 ```
 
-This function allows us to control the execution queue tasks.
-For example, a function can be executed synchronously, as a microtask or a macrotask
+
+``getTaskWrapperFunction`` - This function allows us to control the execution queue tasks.
+
+For example, a function can be executed synchronously, as a microtask or a macrotask.
+
 [For undestand](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 ```javascript
 function getTaskWrapperFunction (task: Task): Function {
@@ -43,7 +46,8 @@ function getTaskWrapperFunction (task: Task): Function {
 }
 ```
 
-This function determines the execution time of tasks for each iteration
+
+``getFrameFunction`` - This function determines the execution time of tasks for each iteration
 ```javascript
 function getFrameFunction (taskForFrame: Array<Task>): Function {
   var countTasks = tasks.length
@@ -66,12 +70,13 @@ function doubleRaf (cb) { return raf(() => raf(cb)) }
 function longRaf (cb) { return setTimeout(cb, 16 * 4) }
 ```
 
-This function is performed at the beginning of each iteration
+
+``beforeFrame`` - This function is performed at the beginning of each iteration
 ```javascript
 function beforeFrame (): void { (this: typeof Scheduler) }
 ```
 
-This function is executed at the end of each iteration
+``afterFrame`` - This function is executed at the end of each iteration
 ```javascript
 function afterFrame (): void { (this: typeof Scheduler) }
 ```
