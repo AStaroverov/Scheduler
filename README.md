@@ -54,8 +54,8 @@ function getTaskWrapperFunction (task: Task): Function {
 
 ``getFrameFunction`` - This function determines the execution time of tasks for each iteration
 ```javascript
-function getFrameFunction (taskForFrame: Array<Task>): Function {
-  var countTasks = tasks.length
+function getFrameFunction (tasksForFrame: Array<Task>): Function {
+  var countTasks = tasksForFrame.length
 
   switch (true) {
     case countTasks < 30: {
