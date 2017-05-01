@@ -13,7 +13,7 @@ Sometimes for smooth work (60fps) for us applications (SPA) we should manage que
 For this goal was created this Scheduler.
 
 ### Usage
-<sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
+<sup>[Flow](https://flow.org/) is used for additional information</sup>
 
 ```javascript
 import Scheduler from 'Scheduler'
