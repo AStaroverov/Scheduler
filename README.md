@@ -1,14 +1,14 @@
 # Scheduler
 
-### (Why?)[#why?]
-### (Usage)[#usage]
-### (Api)[#api]
+### [Why?](#why?)
+### [Usage](#usage)
+### [Api](#api)
 
 ### Why?
 TODO
 
 ### Usage
-<sup>(Flow)[https://flow.org/] is used for additional information</sup>
+<sup>[Flow](https://flow.org/) is used for additional information</sup>
 
 ```javascript
 import Scheduler from 'Scheduler'
@@ -21,7 +21,7 @@ type Task = {
 
 This function allows us to control the execution queue tasks.
 For example, a function can be executed synchronously, as a microtask or a macrotask
-(For undestand)[https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/]
+[For undestand](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 ```javascript
 function getTaskWrapperFunction (task: Task): Function {
   const { priority } = task
@@ -31,10 +31,10 @@ function getTaskWrapperFunction (task: Task): Function {
       return // sync perform of task.handler
     }
     case priority === 2: {
-      return nextTick // (what is it?)[http://blog.millermedeiros.com/promise-nexttick/]
+      return nextTick // [what is it?](http://blog.millermedeiros.com/promise-nexttick/)
     }
     case priority === 3: {
-      return setImmediate // (pollyfill)[https://github.com/YuzuJS/setImmediate]
+      return setImmediate // [pollyfill](https://github.com/YuzuJS/setImmediate)
     }
     default: {
       return setTimeout
@@ -45,7 +45,7 @@ function getTaskWrapperFunction (task: Task): Function {
 
 This function determines the execution time of tasks for each iteration
 ```javascript
-function getFrameFunction (taskForFrame: Array<Task>) {
+function getFrameFunction (taskForFrame: Array<Task>): Function {
   var countTasks = tasks.length
 
   switch (true) {
@@ -89,6 +89,9 @@ instance.start()
 ```
 
 ### API
+Used  for
+``new Scheduler({ getTaskWrapperFunction?, getFrameFunction?, beforeFrame?, afterFrame? })`` - Init Scheduler
+
 ``start`` - Launch scheduler
 
 ``stop`` - Stops scheduler
