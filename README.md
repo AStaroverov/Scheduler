@@ -93,8 +93,11 @@ Used  for
 ``new Scheduler({ getTaskWrapperFunction?, getFrameFunction?, beforeFrame?, afterFrame? })`` - Init Scheduler
 
 ``getTaskWrapperFunction(task: Task): Function`` -
+
 ``getFrameFunction(tasks: Array<Task>): Function`` -
+
 ``beforeFrame(): void { (this: typeof Scheduler) }`` -
+
 ``afterFrame(): void { (this: typeof Scheduler) }`` - description inside [Usage](#user-content-usage-1)
 
 ``start()`` - Launch scheduler
