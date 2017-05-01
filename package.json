@@ -1,0 +1,25 @@
+{
+  "name": "scheduler",
+  "version": "1.0.0",
+  "description": "scheduler for absolutly control",
+  "main": "scheduler.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AStaroverov/Scheduler.git"
+  },
+  "author": "AStaroverov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AStaroverov/Scheduler/issues"
+  },
+  "homepage": "https://github.com/AStaroverov/Scheduler#readme"
+}
