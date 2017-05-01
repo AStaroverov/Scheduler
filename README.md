@@ -14,7 +14,7 @@ For this goals was created this Scheduler.
 <sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
 
 ```javascript
-import() Scheduler from 'Scheduler'
+import Scheduler from 'Scheduler'
 
 type Task() = {
   handler: Function,
