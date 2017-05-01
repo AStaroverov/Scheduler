@@ -41,10 +41,10 @@ function getTaskWrapperFunction (task: Task): Function {
       return // sync perform of task.handler
     }
     case priority === 2: {
-      return nextTick // [what is it?](http://blog.millermedeiros.com/promise-nexttick/)
+      return nextTick // what is it? - http://blog.millermedeiros.com/promise-nexttick/
     }
     case priority === 3: {
-      return setImmediate // [pollyfill](https://github.com/YuzuJS/setImmediate)
+      return setImmediate // pollyfill - https://github.com/YuzuJS/setImmediate
     }
     default: {
       return setTimeout
