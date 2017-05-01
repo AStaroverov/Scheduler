@@ -1,8 +1,8 @@
 # Scheduler
 
-### [Why?](#why?)
-### [Usage](#usage)
-### [Api](#api)
+### [Why?](#user-content-why-1)
+### [Usage](#user-content-usage-1)
+### [Api](#user-content-api-1)
 
 ### Why?
 TODO
