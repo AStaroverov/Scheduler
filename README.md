@@ -13,7 +13,6 @@ For this goals was created this Scheduler.
 ### Usage
 <sup>[Flow](https://flow.org/) is used for additional information(task.handler: ()Function)</sup>
 
-```javascript
 import Scheduler from 'Scheduler'
 
 type Task() = {
@@ -99,7 +98,6 @@ instance.start()
 ```
 
 ### API
-Used  for
 ``new Scheduler({ getTaskWrapperFunction?, getFrameFunction?, beforeFrame?, afterFrame? })`` - Init Scheduler
 
 ``getTaskWrapperFunction(task: Task): Function`` -
