@@ -18,7 +18,7 @@ For this goal was created this Scheduler.
 ```javascript
 import Scheduler from 'Scheduler'
 
-type Task() = {
+type Task = {
   handler: Function,
   priority?: number // some props for choose task priorty
 }
