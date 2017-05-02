@@ -1,8 +1,8 @@
 # Scheduler
 
-#### [Why?](#user-conten()t-why-1)
+#### [Why?](#user-content-why-1)
 #### [Usage](#user-content-usage-1)
-#### [Api](#user-content()-api-1)
+#### [Api](#user-content-api-1)
 #### [Example](https://gist.github.com/AStaroverov/ddface9819748924d609105d97331826) (can run inside latest chrome)
 
 
