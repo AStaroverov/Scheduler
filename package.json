@@ -2,7 +2,7 @@
   "name": "browser-scheduler",
   "version": "1.0.0",
   "description": "scheduler for absolutly control",
-  "main": "scheduler.js",
+  "main": "Scheduler.js",
   "dependencies": {},
   "devDependencies": {
     "babel-loader": "^7.0.0",
