@@ -20,7 +20,6 @@ export default class Scheduler {
     this._performTasks = this._performTasks.bind(this)
     this._startNextFrame = this._startNextFrame.bind(this)
 
-    this._nextFrame = true
     this._stopScheduler = false
   }
 
@@ -69,23 +68,23 @@ export default class Scheduler {
       this._afterFrame.call(this)
     }
 
-    this._nextFrame = true
+    this._runner()
   }
 
   _performTasks () {
-    var task = this.frameTasks.shift()
+    var length = this.frameTasks.length
+    var i = 0
 
-    if (!task) return this._runner()
+    while (++i <= length) {
+      var task = this.frameTasks[i - 1]
+      var fn = this._getTaskWrapperFunction(task)
 
-    var fn = this._getTaskWrapperFunction(task)
-
-    if (fn) {
-      fn(task.handler)
-    } else {
-      task.handler()
+      if (fn) {
+        fn(task.handler)
+      } else {
+        task.handler()
+      }
     }
-
-    this._performTasks()
   }
 
   _runner () {
@@ -94,11 +93,13 @@ export default class Scheduler {
     var taskLength = this.tasks.length
     var subscribesTasksLength = this.subscribesTasks.length
 
-    if (!this._nextFrame || taskLength + subscribesTasksLength === 0) {
+    if (taskLength + subscribesTasksLength === 0) {
       raf(this._runner)
 
       return
     }
+
+    this.frameTasks = []
 
     if (taskLength) {
       this.frameTasks = this.frameTasks.concat(this.tasks)
@@ -113,7 +114,6 @@ export default class Scheduler {
       this._beforeFrame.call(this)
     }
 
-    this._nextFrame = false
     this._getFrameFunction(this.frameTasks)(this._startNextFrame)
     this._performTasks()
   }
