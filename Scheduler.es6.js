@@ -75,8 +75,8 @@ export default class Scheduler {
     var length = this.frameTasks.length
     var i = 0
 
-    while (++i <= length) {
-      var task = this.frameTasks[i - 1]
+    while (i < length) {
+      var task = this.frameTasks[i]
       var fn = this._getTaskWrapperFunction(task)
 
       if (fn) {
@@ -84,6 +84,8 @@ export default class Scheduler {
       } else {
         task.handler()
       }
+      
+      i++
     }
   }
 
